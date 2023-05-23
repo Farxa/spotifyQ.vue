@@ -31,7 +31,7 @@ export default {
   components: true,
   // specify the server middleware for your Express server
   serverMiddleware: [
-    { path: '/api', handler: '../server/index.ts' }, // Replace with your server file path
+    { path: '/api', handler: '../index.ts' }, // Replace with your server file path
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules

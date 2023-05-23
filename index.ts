@@ -6,6 +6,7 @@ import { User } from "./db/index";
 import authRoutes from "./routes/auth";
 import routes from "./routes/routes";
 import dotenv from "dotenv";
+import { connectToDatabase } from "./db/index";
 
 // Set up Express app
 const app: express.Application = express();
@@ -71,6 +72,9 @@ passport.use(
     }
   )
 );
+
+// Connect to MongoDB
+connectToDatabase();
 
 // Use the routes from the separate file
 app.use("/auth", authRoutes);
